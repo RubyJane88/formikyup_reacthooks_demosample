@@ -6,7 +6,7 @@ export default function ReactHook() {
 
   return (
     <div>
-      <h1>React Hooks</h1>
+      <h1>React Hooks Explained</h1>
       {token ? toke : <TokenForm setToken={setToke} />}
     </div>
   );
