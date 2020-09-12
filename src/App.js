@@ -1,8 +1,12 @@
-import React, { Component, useState } from "react";
+import React, { useState, useEffect } from "react";
 import TokenForm from "./TokenForm";
 
 export default function ReactHook() {
   const [] = useState(sessionStorage.getItem("token"));
+
+  useEffect(() => {
+    sessionStorage.setItem("token", token);
+  });
 
   return (
     <div>
