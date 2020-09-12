@@ -4,6 +4,7 @@ import { ErrorMessage, Form, Formik } from "formik";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import FormikValuesViewer from "./formik-values-viewer";
+import FormikTextfield from "./formik-textfield";
 
 const FormikPlainForm = ({
   initialValues,
@@ -36,55 +37,31 @@ const FormikPlainForm = ({
     >
       {(formikProps) => (
         <Form className={`${classes.rootInput}`}>
-          <section className={classes.full}>
-            <TextField
-              className={classes.full}
-              id={textFieldOne}
-              value={formikProps.values[`${textFieldOne}`]}
-              onChange={formikProps.handleChange}
-              variant="outlined"
-              onBlur={formikProps.handleBlur}
-              placeholder={placeholderOne}
-              label={labelOne}
-            />
-            <div style={{ color: "red" }}>
-              <ErrorMessage name={textFieldOne} />
-            </div>
-          </section>
+          <FormikTextfield
+            classes={classes}
+            id={textFieldOne}
+            placeholder={placeholderOne}
+            formikProps={formikProps}
+            label={labelOne}
+          />
 
           {/*onChange - an event to capture keyboard strokes. This is for the data binding */}
 
-          <section className={classes.full}>
-            <TextField
-              className={classes.full}
-              id={textFieldTwo}
-              value={formikProps.values[`${textFieldTwo}`]}
-              onChange={formikProps.handleChange}
-              variant="outlined"
-              onBlur={formikProps.handleBlur}
-              placeholder={placeholderTwo}
-              label={labelTwo}
-            />
-            <div style={{ color: "red" }}>
-              <ErrorMessage name={textFieldTwo} />
-            </div>
-          </section>
+          <FormikTextfield
+            classes={classes}
+            id={textFieldTwo}
+            placeholder={placeholderTwo}
+            formikProps={formikProps}
+            label={labelTwo}
+          />
 
-          <section className={classes.full}>
-            <TextField
-              className={classes.full}
-              id={textFieldThree}
-              value={formikProps.values[`${textFieldThree}`]}
-              onChange={formikProps.handleChange}
-              variant="outlined"
-              onBlur={formikProps.handleBlur}
-              placeholder={placeholderThree}
-              label={labelThree}
-            />
-            <div style={{ color: "red" }}>
-              <ErrorMessage name={textFieldThree} />
-            </div>
-          </section>
+          <FormikTextfield
+            classes={classes}
+            id={textFieldThree}
+            placeholder={placeholderThree}
+            formikProps={formikProps}
+            label={labelThree}
+          />
 
           <section className={classes.full}>
             <Button
@@ -128,5 +105,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+  },
+
+  errorColor: {
+    color: "red",
   },
 }));
