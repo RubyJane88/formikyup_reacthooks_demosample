@@ -8,7 +8,7 @@ const FormikTextfield = ({ classes, id, formikProps, placeholder, label }) => {
       <TextField
         className={classes.full}
         id={id}
-        value={formikProps.values[`${id}`]}
+        value={formikProps.values[`${id}`]}  
         onChange={formikProps.handleChange}
         variant="outlined"
         onBlur={formikProps.handleBlur}

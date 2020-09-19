@@ -10,6 +10,8 @@ import Container from "@material-ui/core/Container";
 import FormikPlainForm from "./components/formik-plain-form";
 import * as yup from "yup";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import initialOfPersonObject from "./forms-schema/formikplain";
+import UseReducerDemo from "./components/use-reducer-demo";
 
 export default function ReactHook() {
   /*
@@ -29,59 +31,54 @@ react class:
   }
   */
   const classes = useStyles();
-  const [person, setPerson] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-  });
 
   //to update the values of the local state Person object
-  useEffect(() => {
-    setPerson({ firstName: "", lastName: "", email: "" });
-  }, []);
+  useEffect(() => {}, []);
   // [] - to stop infinite look
 
   return (
     <div>
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              News
-            </Typography>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
-      </div>
+      <UseReducerDemo />
 
-      <CssBaseline>
-        <Container>
-          <h1>Formik Yup</h1>
+      {/*<div className={classes.root}>*/}
+      {/*  <AppBar position="static">*/}
+      {/*    <Toolbar>*/}
+      {/*      <IconButton*/}
+      {/*        edge="start"*/}
+      {/*        className={classes.menuButton}*/}
+      {/*        color="inherit"*/}
+      {/*        aria-label="menu"*/}
+      {/*      >*/}
+      {/*        <MenuIcon />*/}
+      {/*      </IconButton>*/}
+      {/*      <Typography variant="h6" className={classes.title}>*/}
+      {/*        News*/}
+      {/*      </Typography>*/}
+      {/*      <Button color="inherit">Login</Button>*/}
+      {/*    </Toolbar>*/}
+      {/*  </AppBar>*/}
+      {/*</div>*/}
 
-          <FormikPlainForm
-            initialValues={person}
-            textButton={"zend"}
-            textFieldOne={"firstName"}
-            textFieldTwo={"lastName"}
-            textFieldThree={"email"}
-            placeholderOne={"🍇"}
-            placeholderTwo={"🍊"}
-            placeholderThree={"🥒"}
-            labelOne={"First Name"}
-            labelTwo={"Last Name"}
-            labelThree={"Email"}
-            validationSchema={schema}
-          />
-        </Container>
-      </CssBaseline>
+      {/*<CssBaseline>*/}
+      {/*  <Container>*/}
+      {/*    <h1>Formik Yup</h1>*/}
+
+      {/*    <FormikPlainForm*/}
+      {/*      initialValues={initialOfPersonObject}*/}
+      {/*      textButton={"zend"}*/}
+      {/*      textFieldOne={"firstName"}*/}
+      {/*      textFieldTwo={"lastName"}*/}
+      {/*      textFieldThree={"email"}*/}
+      {/*      placeholderOne={"🍇"}*/}
+      {/*      placeholderTwo={"🍊"}*/}
+      {/*      placeholderThree={"🥒"}*/}
+      {/*      labelOne={"First Name"}*/}
+      {/*      labelTwo={"Last Name"}*/}
+      {/*      labelThree={"Email"}*/}
+      {/*      validationSchema={schema}*/}
+      {/*    />*/}
+      {/*  </Container>*/}
+      {/*</CssBaseline>*/}
     </div>
   );
 }
