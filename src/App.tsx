@@ -1,8 +1,7 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import * as yup from "yup";
-import UseReducerDemo from "./components/react_sampledemos/use-reducer-demo";
-
+import UseContext from "./components/react_sampledemos/use-context-provider-demo";
 export default function ReactHook() {
   const classes = useStyles();
 
@@ -10,7 +9,7 @@ export default function ReactHook() {
 
   return (
     <div className={classes.rootInput}>
-      <UseReducerDemo />
+      <UseContext />
     </div>
   );
 }

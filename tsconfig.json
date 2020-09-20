@@ -15,7 +15,7 @@
     "removeComments": true,
     "noImplicitReturns": true,
     "noUnusedLocals": false,
-    "strict": true,
+    "strict": false,
     "outDir": "dist",
     "baseUrl": "src",
     "typeRoots": [
