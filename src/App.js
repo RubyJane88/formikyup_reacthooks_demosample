@@ -7,11 +7,11 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Container from "@material-ui/core/Container";
-import FormikPlainForm from "./components/formik-plain-form";
+import FormikPlainForm from "./components/fomik_sampledemos/formik-plain-form";
 import * as yup from "yup";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import initialOfPersonObject from "./forms-schema/formikplain";
-import UseReducerDemo from "./components/use-reducer-demo";
+import UseReducerDemo from "./components/react_sampledemos/use-reducer-demo";
 
 export default function ReactHook() {
   /*
