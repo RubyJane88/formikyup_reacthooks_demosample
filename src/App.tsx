@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import * as yup from "yup";
 import UseContext from "./components/react_sampledemos/use-context-provider-demo";
+import MobxReactDemo from "./components/react_sampledemos/mobx-react-demo";
 export default function ReactHook() {
   const classes = useStyles();
 
@@ -9,7 +10,7 @@ export default function ReactHook() {
 
   return (
     <div className={classes.rootInput}>
-      <UseContext />
+      <MobxReactDemo />
     </div>
   );
 }
